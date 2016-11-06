@@ -3,15 +3,18 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Record Handwriting by HTML5 Canvas | Dang&#39;s blog</title>
+    <title>Dang&#39;s blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta property="og:type" content="article">
-<meta property="og:title" content="Record Handwriting by HTML5 Canvas">
-<meta property="og:url" content="https://nikasa1889.github.io/2016/11/06/record-handwriting/index.html">
+    <meta name="description" content="playbackInterruptCommand = “”;    $(document).bind(“pageinit”, function()    {        $(“#pauseBtn”).hide();        $(“#playBtn”).hide();        drawing = new RecordableDrawing(“canvas1”);">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Dang's blog">
+<meta property="og:url" content="https://nikasa1889.github.io/record-handwriting/index.html">
 <meta property="og:site_name" content="Dang's blog">
-<meta property="og:updated_time" content="2016-11-06T10:54:08.660Z">
+<meta property="og:description" content="playbackInterruptCommand = “”;    $(document).bind(“pageinit”, function()    {        $(“#pauseBtn”).hide();        $(“#playBtn”).hide();        drawing = new RecordableDrawing(“canvas1”);">
+<meta property="og:updated_time" content="2016-11-06T11:01:59.890Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Record Handwriting by HTML5 Canvas">
+<meta name="twitter:title" content="Dang's blog">
+<meta name="twitter:description" content="playbackInterruptCommand = “”;    $(document).bind(“pageinit”, function()    {        $(“#pauseBtn”).hide();        $(“#playBtn”).hide();        drawing = new RecordableDrawing(“canvas1”);">
     
 
     
@@ -197,45 +200,21 @@ ga('send', 'pageview');
 </aside>
 
             
-            <section id="main"><article id="post-record-handwriting" class="article article-type-post" itemscope itemprop="blogPost">
+            <section id="main"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
     <div class="article-inner">
         
-        
-            <header class="article-header">
-                
-    
-        <h1 class="article-title" itemprop="name">
-            Record Handwriting by HTML5 Canvas
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2016/11/06/record-handwriting/">
-            <time datetime="2016-11-05T23:45:43.000Z" itemprop="datePublished">2016-11-06</time>
-        </a>
-    </div>
-
-
-                        
-                        
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/RNN-LSTM-HandWriting/">RNN, LSTM, HandWriting</a>
-    </div>
-
-                    </div>
-                
-            </header>
         
         
         <div class="article-entry" itemprop="articleBody">
         
             
-            
+            <head><br><link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css"><br><script type="text/javascript" src="libs/jquery/2.1.3/jquery.min.js"></script><br><script type="text/javascript" src="libs/jquery-mobile/jquery.mobile-1.4.5.min.js"></script><br><script type="text/javascript" src="js/RecordableDrawing.js"></script><br><br><script type="text/javascript"><br>    playbackInterruptCommand = “”;<br><br>    $(document).bind(“pageinit”, function()<br>    {<br>        $(“#pauseBtn”).hide();<br>        $(“#playBtn”).hide();<br>        drawing = new RecordableDrawing(“canvas1”);<br><br>        $(“#recordBtn”).click(function(){<br>            var btnTxt = $(“#recordBtn .ui-btn-text”).text();<br>            if (btnTxt == ‘Stop’)<br>                stopRecording();<br>            else<br>                startRecording();<br>        });<br><br>        $(“#playBtn”).click(function(){<br>            var btnTxt = $(“#playBtn .ui-btn-text”).text();<br>            if (btnTxt == ‘Stop’)<br>                stopPlayback();<br>            else<br>                startPlayback();<br>        });<br><br>        $(“#pauseBtn”).click(function(){<br>            var btnTxt = $(“#pauseBtn .ui-btn-text”).text();<br>            if (btnTxt == ‘Pause’)<br>            {<br>                pausePlayback();<br>            } else if (btnTxt == ‘Resume’)<br>            {<br>                resumePlayback();<br>            }<br>        });<br><br>        $(“#clearBtn”).click(function(){<br>            drawing.clearCanvas();<br>        });<br>    });<br><br>    function stopRecording()<br>    {<br>        $(“#recordBtn .ui-btn-text”).text(“Record”);<br>        $(“#playBtn”).show();<br>        $(“#clearBtn”).show();<br>        $(“#pauseBtn”).hide();<br><br>        drawing.stopRecording();<br>    }<br><br>    function startRecording()<br>    {<br>        $(“#recordBtn .ui-btn-text”).text(“Stop”);<br>        $(“#playBtn”).hide();<br>        $(“#pauseBtn”).hide();<br>        $(“#clearBtn”).hide();<br><br>        drawing.startRecording();<br>    }<br><br>    function stopPlayback()<br>    {<br>        playbackInterruptCommand = “stop”;<br>    }<br><br>    function startPlayback()<br>    {<br>        drawing.playRecording(function() {<br>            //on playback start<br>            $(“#playBtn .ui-btn-text”).text(“Stop”);<br>            $(“#recordBtn”).hide();<br>            $(“#pauseBtn”).show();<br>            $(“#clearBtn”).hide();<br><br>            playbackInterruptCommand = “”;<br>        }, function(){<br>            //on playback end<br>            $(“#playBtn .ui-btn-text”).text(“Play”);<br>            $(“#playBtn”).show();<br>            $(“#recordBtn”).show();<br>            $(“#clearBtn”).show();<br>            $(“#pauseBtn”).hide();<br>        }, function() {<br>            //on pause<br>            $(“#pauseBtn .ui-btn-text”).text(“Resume”);<br>            $(“#recordBtn”).hide();<br>            $(“#playBtn”).hide();<br>            $(“#clearBtn”).hide();<br><br>        }, function() {<br>            //status callback<br>            return playbackInterruptCommand;<br>        });<br>    }<br><br>    function pausePlayback()<br>    {<br>        playbackInterruptCommand = “pause”;<br>    }<br><br>    function resumePlayback()<br>    {<br>        playbackInterruptCommand = “”;<br>        drawing.resumePlayback(function(){<br>            $(“#pauseBtn .ui-btn-text”).text(“Pause”);<br>            $(“#pauseBtn”).show();<br>            $(“#recordBtn”).hide();<br>            $(“#clearBtn”).hide();<br>            $(“#playBtn”).show();<br>        });<br>    }<br></script><br></head>
+
+<hr>
+<p>title: Handwriting Recorder for Mobile</p>
+<h2 id="date-2016-11-06-11-50-19"><a href="#date-2016-11-06-11-50-19" class="headerlink" title="date: 2016-11-06 11:50:19"></a>date: 2016-11-06 11:50:19</h2><table><br><tbody><tr><br><td><br><canvas id="canvas1" width="500" height="400" style="border: medium solid rgb(0, 0, 255);"><br></canvas><br></td><br></tr><br><tr><br><td><br><a href="#" data-role="button" data-inline="true" id="recordBtn" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="c" class="ui-btn ui-btn-up-c ui-btn-inline ui-shadow ui-btn-corner-all"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Record</span></span></a><br><a href="#" data-role="button" data-inline="true" id="playBtn" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="c" class="ui-btn ui-btn-up-c ui-btn-inline ui-shadow ui-btn-corner-all" style="display: none;"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Play</span></span></a><br><a href="#" data-role="button" data-inline="true" id="pauseBtn" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="c" class="ui-btn ui-btn-up-c ui-btn-inline ui-shadow ui-btn-corner-all" style="display: none;"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Pause</span></span></a><br><a href="#" data-role="button" data-inline="true" id="clearBtn" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="c" class="ui-btn ui-btn-inline ui-shadow ui-btn-corner-all ui-btn-up-c"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Clear</span></span></a><br><br></td><br></tr><br></tbody><br></table>
+
+
         
         </div>
         <footer class="article-footer">
@@ -245,7 +224,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://nikasa1889.github.io/2016/11/06/record-handwriting/" data-id="civ6j4rol0002m65xq01d5jdt" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://nikasa1889.github.io/record-handwriting/index.html" data-id="civ6j4ron0003m65xx1khd95x" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -313,23 +292,13 @@ ga('send', 'pageview');
 
             
     
-        <a href="https://nikasa1889.github.io/2016/11/06/record-handwriting/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://nikasa1889.github.io/2016/11/06/record-handwriting/">Comments</a>
+        <a href="https://nikasa1889.github.io/record-handwriting/index.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://nikasa1889.github.io/record-handwriting/index.html">Comments</a>
     
 
         </footer>
     </div>
     
         
-<nav id="article-nav">
-    
-    
-        <a href="/2016/11/06/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">Older</strong>
-            <div class="article-nav-title">Hello World</div>
-        </a>
-    
-</nav>
-
 
     
 </article>
@@ -430,9 +399,9 @@ ga('send', 'pageview');
     <script>
     var disqus_config = function () {
         
-            this.page.url = 'https://nikasa1889.github.io/2016/11/06/record-handwriting/';
+            this.page.url = 'https://nikasa1889.github.io/record-handwriting/index.html';
         
-        this.page.identifier = 'record-handwriting';
+        this.page.identifier = 'undefined';
     };
     (function() { 
         var d = document, s = d.createElement('script');  
