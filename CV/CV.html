@@ -3,14 +3,16 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Archive: 2017/3 | Dang&#39;s blog</title>
+    <title>My CV | Dang&#39;s blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Dang's blog">
-<meta property="og:url" content="https://nikasa1889.github.io/archives/2017/03/index.html">
+    <meta name="keywords">
+<meta property="og:type" content="website">
+<meta property="og:title" content="My CV">
+<meta property="og:url" content="https://nikasa1889.github.io/CV/CV.html">
 <meta property="og:site_name" content="Dang's blog">
+<meta property="og:updated_time" content="2017-03-19T23:45:23.141Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Dang's blog">
+<meta name="twitter:title" content="My CV">
     
 
     
@@ -63,6 +65,8 @@ ga('send', 'pageview');
                     <a class="main-nav-link" href="/.">Home</a>
                 
                     <a class="main-nav-link" href="/archives">Archives</a>
+                
+                    <a class="main-nav-link" href="/cv">CV</a>
                 
                     <a class="main-nav-link" href="/about">About</a>
                 
@@ -125,6 +129,8 @@ ga('send', 'pageview');
                 
                     <td><a class="main-nav-link" href="/archives">Archives</a></td>
                 
+                    <td><a class="main-nav-link" href="/cv">CV</a></td>
+                
                     <td><a class="main-nav-link" href="/about">About</a></td>
                 
                 <td>
@@ -154,8 +160,8 @@ ga('send', 'pageview');
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                2
-                <span>posts</span>
+                1
+                <span>post</span>
             </div>
             <div class="article-info-block">
                 0
@@ -188,40 +194,126 @@ ga('send', 'pageview');
 </aside>
 
             
-            <section id="main"><div class="timeline timeline-wrap">
-    
-            <div class="timeline-row timeline-row-major">
-                <span class="node"><i class="fa fa-calendar"></i></span>
-                <h1 class="title">2017</h1>
-            </div>
+            <section id="main"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
+        
+            <header class="article-header">
                 
     
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2017/03/20/My-CV/">My CV</a>
+        <h1 class="article-title" itemprop="name">
+            My CV
         </h1>
     
 
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2017/03/20/My-CV/">
-            <time datetime="2017-03-19T23:15:00.000Z" itemprop="datePublished">2017-03-20</time>
-        </a>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <iframe src="https://docs.google.com/gview?url=https://nikasa1889.github.io/content/CV_Feb2017.pdf&embedded=true" style="width:700px; height:800px;" frameborder="0"></iframe>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://nikasa1889.github.io/CV/CV.html" data-id="cj0hca2a700001e5xuhbwxfod" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://nikasa1889.github.io/CV/CV.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://nikasa1889.github.io/CV/CV.html">Comments</a>
+    
+
+        </footer>
+    </div>
+    
+        
+
+    
+</article>
+
+
+    
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
 
-
-                    
-                    
-                </div>
-            </div>
-        </div>
     
-</div>
+    </section>
+
 </section>
             
                 <aside id="sidebar">
@@ -231,15 +323,6 @@ ga('send', 'pageview');
         <h3 class="widget-title">recent</h3>
         <div class="widget">
             <ul id="recent-post" class="no-thumbnail">
-                
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/2017/03/20/My-CV/" class="title">My CV</a></p>
-                            <p class="item-date"><time datetime="2017-03-19T23:15:00.000Z" itemprop="datePublished">2017-03-20</time></p>
-                        </div>
-                    </li>
                 
                     <li>
                         
@@ -259,7 +342,7 @@ ga('send', 'pageview');
     <div class="widget-wrap">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a><span class="archive-list-count">1</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a><span class="archive-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -290,11 +373,13 @@ ga('send', 'pageview');
     <script>
     var disqus_config = function () {
         
+            this.page.url = 'https://nikasa1889.github.io/CV/CV.html';
+        
         this.page.identifier = 'undefined';
     };
     (function() { 
         var d = document, s = d.createElement('script');  
-        s.src = '//' + 'dangsblog' + '.disqus.com/count.js';
+        s.src = '//' + 'dangsblog' + '.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
     })();
