@@ -1,0 +1,17 @@
+.image-caption {
+  position: relative;
+  left: 0;
+  width: 100%;
+  top: 0;
+  margin-top: 10px;
+  color: rgba(0,0,0,.6);
+  outline: 0;
+  text-align: center;
+  z-index: 300;
+  font-style: normal;
+  letter-spacing: 0;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+
