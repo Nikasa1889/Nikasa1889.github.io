@@ -14,4 +14,15 @@
   font-weight: 300;
 }
 
-
+.img-eq{
+  box-shadow: none;
+}
+.img-big{
+  margin-left: -25%;
+  max-width: 150%;
+}
+.img-big+.image-caption{
+  margin-left: -25%;
+  max-width: 150%;
+  width: 150%
+}
